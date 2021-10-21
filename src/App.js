@@ -7,7 +7,21 @@ export default class App extends Component {
   
   constructor() {
     super();
+    this.state = {
+      gifs: []
+    }
   } 
+
+  componentDidMount() {
+    fetch('1Iif22NnuSxZ9E0dMDd2lH6UEwB2P3fb')
+      .then(response => response.json())
+      .then(responseData => {
+        this.setState({ gifs: responseData.data });
+      })
+      .catch(error => {
+        console.log('Error fetching and passing data', error)
+      });
+  }
 
   render() { 
     return (
