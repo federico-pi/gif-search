@@ -1,2 +1,1 @@
-# gif-search
- t
+# A GIF searching app
